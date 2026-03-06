@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "q_threshold": 30,
+  "per_population": {
+    "1": {
+      "in_r1": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_R1.fastq.gz",
+      "in_r2": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_R2.fastq.gz",
+      "trim_only_r1": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1/1/1.trim.R1.fastq.gz",
+      "trim_only_r2": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1/1/1.trim.R2.fastq.gz",
+      "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_reports/run2/v1/1/fastp.html",
+      "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_reports/run2/v1/1/fastp.json",
+      "q30_before": 0.9465661299558374,
+      "q30_after": 0.948001510528519
+    }
+  }
+}

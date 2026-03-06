@@ -1,0 +1,7 @@
+example | run2 | OVERALL | Post-trim QC | R2
+============================================================
+Total reads: 127818
+Total bases: 24252349
+Q30 rate (base-level): 95.703%
+Mean read length: 189.74
+Median read length: 190

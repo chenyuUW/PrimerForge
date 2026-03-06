@@ -1,0 +1,27 @@
+{
+  "version": "v1",
+  "q_threshold": 30,
+  "min_len": 140,
+  "per_population": {
+    "1": {
+      "trim_only_r1": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1/1/1.trim.R1.fastq.gz",
+      "trim_only_r2": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1/1/1.trim.R2.fastq.gz",
+      "out_r1": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1/1/1.trimQ30.minlen140.R1.fastq.gz",
+      "out_r2": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1/1/1.trimQ30.minlen140.R2.fastq.gz",
+      "filter_metrics": {
+        "total_pairs": 128064,
+        "kept_pairs": 127818,
+        "dropped_pairs": 246,
+        "kept_rate": 0.9980790854572713,
+        "short_rate": 0.0019209145427286356
+      }
+    }
+  },
+  "global": {
+    "total_pairs": 128064,
+    "kept_pairs": 127818,
+    "dropped_pairs": 246,
+    "kept_rate": 0.9980790854572713,
+    "short_rate": 0.0019209145427286356
+  }
+}

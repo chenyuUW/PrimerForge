@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "signature": {
+    "multiplex_csv": {
+      "exists": true,
+      "mtime": 1772670271,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
+      "size": 72
+    },
+    "r1": {
+      "exists": true,
+      "mtime": 1772585634,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R1_001.fastq.gz",
+      "size": 8615066
+    },
+    "r2": {
+      "exists": true,
+      "mtime": 1772585635,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R2_001.fastq.gz",
+      "size": 7737291
+    },
+    "stage": "stage0_validation"
+  },
+  "stage": "stage0_validation",
+  "time": 1772763510
+}

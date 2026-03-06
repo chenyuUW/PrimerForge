@@ -1,0 +1,158 @@
+{
+  "run_id": "20260306T021830Z_pid57420",
+  "exp": "example",
+  "run_tag": "run2",
+  "created_utc": "2026-03-06T02:18:30.208860+00:00",
+  "inputs": {
+    "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R1_001.fastq.gz",
+    "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R2_001.fastq.gz",
+    "multiplex_csv": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
+    "umi_primers_csv": "/home/uniscan/PrimerForge/input_data/example/example_UMI_primers.csv"
+  },
+  "stages": {
+    "stage0_validation": {
+      "status": "success",
+      "result": {
+        "ok": true,
+        "fastq": {
+          "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R1_001.fastq.gz",
+          "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R2_001.fastq.gz",
+          "r1_records": 203624,
+          "r2_records": 203624
+        },
+        "multiplex_csv": {
+          "path": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
+          "n_rows": 1,
+          "unique_populations": [
+            "1"
+          ],
+          "n_populations": 1,
+          "index_key_mode": "R1+R2"
+        }
+      }
+    },
+    "stage1_raw_qc": {
+      "status": "success",
+      "metrics_path": "/home/uniscan/PrimerForge/results/example/metrics/metrics_raw_qc.json"
+    },
+    "stage2_demux": {
+      "status": "success",
+      "metrics_path": "/home/uniscan/PrimerForge/results/example/demultiplexing/run2/metrics_demux.json"
+    },
+    "stage2_5_demux_qc": {
+      "status": "success",
+      "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/run2",
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/run2",
+      "unmatched_rate": 0.06252209955604447
+    },
+    "stage3_umi_extract": {
+      "status": "success",
+      "mode": "strict",
+      "umi_extracted_root": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2",
+      "overall_unmatched_rate": 0.3285348336502648,
+      "per_population": {
+        "1": {
+          "total_pairs": 190893,
+          "extracted_pairs": 128178,
+          "unmatched_pairs": 62715,
+          "unmatched_rate": 0.3285348336502648,
+          "short_pairs_lt150": 47801,
+          "short_rate_lt150": 0.2504072962340159,
+          "usable_pairs_ge150": 143092,
+          "usable_unmatched_pairs": 15144,
+          "usable_unmatched_rate": 0.10583400888938585,
+          "usable_fail_reason_pair": {
+            "missing_prefix_anywhere": 8276,
+            "missing_anchor_right": 6868
+          },
+          "umi_dict_path": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_UMI_dict.pkl",
+          "out_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1",
+          "reason_report": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/umi_extraction_summary.txt",
+          "fail_reason_pair": {
+            "missing_anchor_right": 49351,
+            "missing_prefix_anywhere": 11748,
+            "too_short": 1616
+          },
+          "fail_reason_r1": {
+            "missing_anchor_right": 41588,
+            "missing_prefix_anywhere": 10351,
+            "too_short": 1616
+          },
+          "fail_reason_r2": {
+            "missing_anchor_right": 40392,
+            "too_short": 5978,
+            "missing_prefix_anywhere": 2663
+          }
+        }
+      },
+      "overall_fail_reason_pair": {
+        "missing_anchor_right": 49351,
+        "missing_prefix_anywhere": 11748,
+        "too_short": 1616
+      },
+      "overall_fail_reason_r1": {
+        "missing_anchor_right": 41588,
+        "missing_prefix_anywhere": 10351,
+        "too_short": 1616
+      },
+      "overall_fail_reason_r2": {
+        "missing_anchor_right": 40392,
+        "too_short": 5978,
+        "missing_prefix_anywhere": 2663
+      }
+    },
+    "stage4_clean_qc": {
+      "status": "success",
+      "umi_extracted_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2",
+      "qc_overview_root": "/home/uniscan/PrimerForge/results/example/qc_overview/02_clean_after_umi/run2",
+      "qc_details_root": "/home/uniscan/PrimerForge/results/example/qc_details/02_clean_after_umi/run2",
+      "per_population": {
+        "1": {
+          "r1": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_R1.fastq.gz",
+          "r2": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_R2.fastq.gz",
+          "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/02_clean_after_umi/run2/1",
+          "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/02_clean_after_umi/run2/1",
+          "r1_total_reads": 128178,
+          "r2_total_reads": 128178,
+          "r1_q30_rate": 0.9377042590015531,
+          "r2_q30_rate": 0.9555213461008861
+        }
+      }
+    },
+    "stage5_preprocess": {
+      "status": "success",
+      "version": "v1",
+      "q_threshold": 30,
+      "min_len": 140,
+      "trim_only_dir": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1",
+      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1",
+      "trim_reports_dir": "/home/uniscan/PrimerForge/results/example/trim_reports/run2/v1",
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/03_trim_only/run2/v1",
+      "global": {
+        "total_pairs": 128064,
+        "kept_pairs": 127818,
+        "dropped_pairs": 246,
+        "kept_rate": 0.9980790854572713,
+        "short_rate": 0.0019209145427286356
+      }
+    },
+    "stage6_post_trim_qc": {
+      "status": "success",
+      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1",
+      "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/01_post_trim/run2",
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2",
+      "overall_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2/overall",
+      "per_population_overview": {
+        "1": {
+          "r1_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2/1/R1",
+          "r2_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2/1/R2"
+        }
+      },
+      "n_populations": 1,
+      "overall_q30_rate_r1": 0.9390313492809352,
+      "overall_q30_rate_r2": 0.9570304303306867
+    }
+  },
+  "status": "stage_6_success",
+  "finished_utc": "2026-03-06T02:20:22.559297+00:00"
+}

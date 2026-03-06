@@ -1,0 +1,24 @@
+{
+  "version": "v1",
+  "min_len": 140,
+  "per_population": {
+    "1": {
+      "total_pairs": 128064,
+      "short_pairs": 246,
+      "kept_pairs": 127818,
+      "short_rate": 0.0019209145427286356,
+      "kept_rate": 0.9980790854572713,
+      "estimated_dropped_reads": 246
+    }
+  },
+  "global": {
+    "total_pairs": 128064,
+    "short_pairs": 246,
+    "short_rate": 0.0019209145427286356,
+    "kept_rate": 0.9980790854572714
+  },
+  "decision": {
+    "abnormal": false,
+    "stop_prompt": false
+  }
+}

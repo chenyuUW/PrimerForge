@@ -1,0 +1,53 @@
+{
+  "done": true,
+  "extra": {
+    "stage5_result": {
+      "global": {
+        "dropped_pairs": 246,
+        "kept_pairs": 127818,
+        "kept_rate": 0.9980790854572713,
+        "short_rate": 0.0019209145427286356,
+        "total_pairs": 128064
+      },
+      "min_len": 140,
+      "q_threshold": 30,
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/03_trim_only/run2/v1",
+      "status": "success",
+      "trim_only_dir": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1",
+      "trim_reports_dir": "/home/uniscan/PrimerForge/results/example/trim_reports/run2/v1",
+      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1",
+      "version": "v1"
+    }
+  },
+  "signature": {
+    "exp": "example",
+    "multiplex_csv": {
+      "exists": true,
+      "mtime": 1772670271,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
+      "size": 72
+    },
+    "r1": {
+      "exists": true,
+      "mtime": 1772585634,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R1_001.fastq.gz",
+      "size": 8615066
+    },
+    "r2": {
+      "exists": true,
+      "mtime": 1772585635,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R2_001.fastq.gz",
+      "size": 7737291
+    },
+    "run_tag": "run2",
+    "stage": "stage5_preprocess",
+    "umi_primers_csv": {
+      "exists": true,
+      "mtime": 1772672381,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_UMI_primers.csv",
+      "size": 108
+    }
+  },
+  "stage": "stage5_preprocess",
+  "time": 1772763617
+}
