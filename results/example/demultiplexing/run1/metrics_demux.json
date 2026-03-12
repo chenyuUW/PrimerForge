@@ -1,0 +1,37 @@
+{
+  "stage": "stage2_demux",
+  "exp": "example",
+  "run_tag": "run1",
+  "status": "success",
+  "inputs": {
+    "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R1_001.fastq",
+    "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R2_001.fastq",
+    "multiplex_csv": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv"
+  },
+  "outputs": {
+    "outdir": "/home/uniscan/PrimerForge/results/example/demultiplexing/run1",
+    "unmatched_r1": "/home/uniscan/PrimerForge/results/example/demultiplexing/run1/unmatched_R1.fastq.gz",
+    "unmatched_r2": "/home/uniscan/PrimerForge/results/example/demultiplexing/run1/unmatched_R2.fastq.gz"
+  },
+  "unmatched_rate_definition": "unmatched pairs / total pairs",
+  "total_pairs": 165273,
+  "unmatched_pairs": 11935,
+  "unmatched_rate": 0.07221385223236705,
+  "per_population_pairs": {
+    "1": 153338
+  },
+  "index_lengths": {
+    "r1_unique_lengths": [
+      8
+    ],
+    "r2_unique_lengths": [
+      8
+    ],
+    "r1_max_len": 8,
+    "r2_max_len": 8
+  },
+  "decision": {
+    "abnormal": false,
+    "stop_prompt": false
+  }
+}

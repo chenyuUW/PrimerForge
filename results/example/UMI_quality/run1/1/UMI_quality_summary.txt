@@ -1,0 +1,20 @@
+Experiment: example
+Run tag: run1
+Population: 1
+------------------------------------------------------------
+Total read pairs: 153338
+Pairs with UMI extracted: 91223
+Unmatched (failed extraction) pairs: 62115
+Unique UMI families: 60957
+Mean reads per family: 1.497
+Median family size: 1
+Max family size: 12
+------------------------------------------------------------
+Family size distribution (count / percent of families):
+  size=1 : 40746  (66.844%)
+  size=2 : 13538  (22.209%)
+  size=3 : 4418  (7.248%)
+  size>3 : 2255  (3.699%)
+------------------------------------------------------------
+Families size>=2: 20211 (33.156%)
+Families size>=3: 6673 (10.947%)

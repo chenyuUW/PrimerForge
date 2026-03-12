@@ -22,6 +22,9 @@ from primerforge.pipeline.stage3_5_umi_quality import stage3_5_umi_quality
 from primerforge.pipeline.stage4_clean_qc import stage4_clean_qc
 from primerforge.pipeline.stage5_preprocess import stage5_preprocess
 from primerforge.pipeline.stage6_post_trim_qc import stage6_post_trim_qc
+from primerforge.pipeline.stage7_family_strategy import stage7_family_strategy
+from primerforge.pipeline.stage8_alignment import stage8_alignment
+from primerforge.pipeline.stage8_5_alignment_qc import stage8_5_alignment_qc
 
 from primerforge.utils.resume import ResumeManager, file_fingerprint
 def parse_args() -> argparse.Namespace:
@@ -35,7 +38,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--no_resume", action="store_true", help="Disable resume; always run all stages")
     p.add_argument("--rerun_from", default=None, help="Force rerun from this stage name (inclusive)")
     p.add_argument("--list_stages", action="store_true", help="Print stage names and exit")
-
+    p.add_argument(
+        "--reference_index",
+        required=False,
+        default="input_data/reference_docs/rpoB_bowtie_index/rpoBsequence_index",
+        help="Bowtie2 index prefix"
+    )
     return p.parse_args()
 
 
@@ -48,6 +56,7 @@ def main() -> None:
     r2 = Path(args.r2).resolve()
     multiplex_csv = Path(args.multiplex_csv).resolve()
     umi_primers_csv = Path(args.umi_primers_csv).resolve()
+    reference_index = Path(args.reference_index).resolve()
 
     exp_dir = results_dir(exp)
     metrics_dir = exp_dir / "metrics"
@@ -75,6 +84,9 @@ def main() -> None:
         "stage4_clean_qc",
         "stage5_preprocess",
         "stage6_post_trim_qc",
+        "stage7_family_strategy",
+        "stage8_alignment",
+        "stage8_5_alignment_qc",
     ]
 
     if args.list_stages:
@@ -303,23 +315,23 @@ def main() -> None:
         print("Error:", str(e))
         sys.exit(1)
 
-        # ---------- Stage 3.5 ----------
-        print("Running Stage 3.5: UMI quality summary (txt + terminal print)...")
-        try:
-            stage3_5_result = stage3_5_umi_quality(
-                exp=exp,
-                run_tag=run_tag,
-                results_exp_dir=exp_dir,
-                stage3_result=stage3_result,
-            )
-            update_stage(manifest_path, "stage3_5_umi_quality", stage3_5_result)
-            print("\nStage 3.5 completed successfully.\n")
-        except Exception as e:
-            update_stage(manifest_path, "stage3_5_umi_quality", {"status": "failed", "error": str(e)})
-            finalize_manifest(manifest_path, status="failed")
-            print("\nStage 3.5 FAILED.")
-            print("Error:", str(e))
-            sys.exit(1)
+    # ---------- Stage 3.5 ----------
+    print("Running Stage 3.5: UMI quality summary (txt + terminal print)...")
+    try:
+        stage3_5_result = stage3_5_umi_quality(
+            exp=exp,
+            run_tag=run_tag,
+            results_exp_dir=exp_dir,
+            stage3_result=stage3_result,
+        )
+        update_stage(manifest_path, "stage3_5_umi_quality", stage3_5_result)
+        print("\nStage 3.5 completed successfully.\n")
+    except Exception as e:
+        update_stage(manifest_path, "stage3_5_umi_quality", {"status": "failed", "error": str(e)})
+        finalize_manifest(manifest_path, status="failed")
+        print("\nStage 3.5 FAILED.")
+        print("Error:", str(e))
+        sys.exit(1)
 
     # ---------- Stage 4 ----------
     print("Running Stage 4: Clean QC after UMI/primer stripping (per-pop details + overview)...")
@@ -433,8 +445,98 @@ def main() -> None:
         print("Error:", str(e))
         sys.exit(1)
 
+    # ---------- Stage 7 ----------
+    print("Running Stage 7: Family strategy selection (reporting / collapse / consensus / family-resolved)...")
 
-    finalize_manifest(manifest_path, status="stage_6_success")
-    print("Pipeline finished (Stage 0–6).\n")
+    STAGE = "stage7_family_strategy"
+    sig = {**base_sig, "stage": STAGE}
+
+    try:
+        if resume_enabled and resume.is_done(STAGE, sig):
+            print("[RESUME] stage7_family_strategy already done — skipping\n")
+            stage7_result = {"status": "skipped_resume"}
+        else:
+            stage7_result = stage7_family_strategy(
+                exp=exp,
+                run_tag=run_tag,
+                results_exp_dir=exp_dir,
+                metrics_dir=metrics_dir,
+                trimmed_version=None,
+            )
+            if resume_enabled:
+                resume.mark_done(STAGE, sig)
+
+        update_stage(manifest_path, STAGE, stage7_result)
+        print("\nStage 7 completed successfully.\n")
+
+    except Exception as e:
+        update_stage(manifest_path, STAGE, {"status": "failed", "error": str(e)})
+        finalize_manifest(manifest_path, status="failed")
+        print("\nStage 7 FAILED.")
+        print("Error:", str(e))
+        sys.exit(1)
+
+    # ---------- Stage 8 ----------
+    print("Running Stage 8: Alignment (Bowtie2 + samtools)...")
+
+    STAGE = "stage8_alignment"
+    sig = {**base_sig, "stage": STAGE, "reference_index": str(reference_index)}
+
+    try:
+        if resume_enabled and resume.is_done(STAGE, sig):
+            print("[RESUME] stage8_alignment already done — skipping\n")
+            stage8_result = {"status": "skipped_resume"}
+        else:
+            stage8_result = stage8_alignment(
+                exp=exp,
+                run_tag=run_tag,
+                results_exp_dir=exp_dir,
+                reference_index=reference_index,
+            )
+            if resume_enabled:
+                resume.mark_done(STAGE, sig)
+
+        update_stage(manifest_path, STAGE, stage8_result)
+        print("\nStage 8 completed successfully.\n")
+
+    except Exception as e:
+        update_stage(manifest_path, STAGE, {"status": "failed", "error": str(e)})
+        finalize_manifest(manifest_path, status="failed")
+        print("\nStage 8 FAILED.")
+        print("Error:", str(e))
+        sys.exit(1)
+
+    # ---------- Stage 8.5 ----------
+    print("Running Stage 8.5: Alignment QC (flagstat / coverage / depth)...")
+
+    STAGE = "stage8_5_alignment_qc"
+    sig = {**base_sig, "stage": STAGE}
+
+    try:
+        if resume_enabled and resume.is_done(STAGE, sig):
+            print("[RESUME] stage8_5_alignment_qc already done — skipping\n")
+            stage8_5_result = {"status": "skipped_resume"}
+        else:
+            stage8_5_result = stage8_5_alignment_qc(
+                exp=exp,
+                run_tag=run_tag,
+                results_exp_dir=exp_dir,
+            )
+            if resume_enabled:
+                resume.mark_done(STAGE, sig)
+
+        update_stage(manifest_path, STAGE, stage8_5_result)
+        print("\nStage 8.5 completed successfully.\n")
+
+    except Exception as e:
+        update_stage(manifest_path, STAGE, {"status": "failed", "error": str(e)})
+        finalize_manifest(manifest_path, status="failed")
+        print("\nStage 8.5 FAILED.")
+        print("Error:", str(e))
+        sys.exit(1)
+
+    finalize_manifest(manifest_path, status="stage_8_5_success")
+    print("Pipeline finished (Stage 0–8.5).\n")
+
 if __name__ == "__main__":
     main()

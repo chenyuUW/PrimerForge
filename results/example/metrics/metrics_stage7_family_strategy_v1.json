@@ -1,0 +1,34 @@
+{
+  "stage": "stage7_family_strategy",
+  "exp": "example",
+  "run_tag": "run1",
+  "trimmed_version": "v1",
+  "per_population": {
+    "1": {
+      "family_report": {
+        "pop": "1",
+        "trimmed_r1": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R1.fastq.gz",
+        "trimmed_r2": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R2.fastq.gz",
+        "total_families": 60772,
+        "total_pairs": 90959,
+        "size_1": 40619,
+        "size_2": 13493,
+        "size_ge_3": 6660,
+        "mean_family_size": 1.496725465674982,
+        "median_family_size": 1.0
+      },
+      "selection": {
+        "selected_strategy": "reporting"
+      },
+      "strategy_output": {
+        "strategy": "reporting",
+        "pop": "1",
+        "out_r1": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R1.fastq.gz",
+        "out_r2": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R2.fastq.gz",
+        "note": "Direct downstream processing from Stage 5 trimmed FASTQ."
+      },
+      "family_size_table_csv": "/home/uniscan/PrimerForge/results/example/family_strategy/run1/v1/1/family_size_table.csv",
+      "family_report_json": "/home/uniscan/PrimerForge/results/example/family_strategy/run1/v1/1/family_report.json"
+    }
+  }
+}

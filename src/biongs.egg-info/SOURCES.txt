@@ -19,6 +19,7 @@ src/primerforge/pipeline/stage3_umi_extract.py
 src/primerforge/pipeline/stage4_clean_qc.py
 src/primerforge/pipeline/stage5_preprocess.py
 src/primerforge/pipeline/stage6_post_trim_qc.py
+src/primerforge/pipeline/stage7_family_strategy.py
 src/primerforge/qc/__init__.py
 src/primerforge/qc/overview_post_trim.py
 src/primerforge/qc/overview_raw.py

@@ -1,11 +1,11 @@
 {
-  "run_id": "20260306T021830Z_pid57420",
+  "run_id": "20260312T223925Z_pid29237",
   "exp": "example",
-  "run_tag": "run2",
-  "created_utc": "2026-03-06T02:18:30.208860+00:00",
+  "run_tag": "run1",
+  "created_utc": "2026-03-12T22:39:25.926435+00:00",
   "inputs": {
-    "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R1_001.fastq.gz",
-    "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R2_001.fastq.gz",
+    "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R1_001.fastq",
+    "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R2_001.fastq",
     "multiplex_csv": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
     "umi_primers_csv": "/home/uniscan/PrimerForge/input_data/example/example_UMI_primers.csv"
   },
@@ -15,10 +15,10 @@
       "result": {
         "ok": true,
         "fastq": {
-          "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R1_001.fastq.gz",
-          "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R2_R2_001.fastq.gz",
-          "r1_records": 203624,
-          "r2_records": 203624
+          "r1": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R1_001.fastq",
+          "r2": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R2_001.fastq",
+          "r1_records": 165273,
+          "r2_records": 165273
         },
         "multiplex_csv": {
           "path": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
@@ -37,85 +37,117 @@
     },
     "stage2_demux": {
       "status": "success",
-      "metrics_path": "/home/uniscan/PrimerForge/results/example/demultiplexing/run2/metrics_demux.json"
+      "metrics_path": "/home/uniscan/PrimerForge/results/example/demultiplexing/run1/metrics_demux.json"
     },
     "stage2_5_demux_qc": {
       "status": "success",
-      "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/run2",
-      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/run2",
-      "unmatched_rate": 0.06252209955604447
+      "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/run1",
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/run1",
+      "unmatched_rate": 0.07221385223236705
     },
     "stage3_umi_extract": {
       "status": "success",
       "mode": "strict",
-      "umi_extracted_root": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2",
-      "overall_unmatched_rate": 0.3285348336502648,
+      "umi_extracted_root": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1",
+      "overall_unmatched_rate": 0.4050854973979053,
       "per_population": {
         "1": {
-          "total_pairs": 190893,
-          "extracted_pairs": 128178,
-          "unmatched_pairs": 62715,
-          "unmatched_rate": 0.3285348336502648,
-          "short_pairs_lt150": 47801,
-          "short_rate_lt150": 0.2504072962340159,
-          "usable_pairs_ge150": 143092,
-          "usable_unmatched_pairs": 15144,
-          "usable_unmatched_rate": 0.10583400888938585,
+          "total_pairs": 153338,
+          "extracted_pairs": 91223,
+          "unmatched_pairs": 62115,
+          "unmatched_rate": 0.4050854973979053,
+          "short_pairs_lt150": 51725,
+          "short_rate_lt150": 0.3373266900572591,
+          "usable_pairs_ge150": 101613,
+          "usable_unmatched_pairs": 10572,
+          "usable_unmatched_rate": 0.10404180567447079,
           "usable_fail_reason_pair": {
-            "missing_prefix_anywhere": 8276,
-            "missing_anchor_right": 6868
+            "missing_anchor_right": 4771,
+            "missing_prefix_anywhere": 5801
           },
-          "umi_dict_path": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_UMI_dict.pkl",
-          "out_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1",
-          "reason_report": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/umi_extraction_summary.txt",
+          "umi_dict_path": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1/1_UMI_dict.pkl",
+          "out_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1",
+          "reason_report": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1/umi_extraction_summary.txt",
           "fail_reason_pair": {
-            "missing_anchor_right": 49351,
-            "missing_prefix_anywhere": 11748,
-            "too_short": 1616
+            "missing_anchor_right": 50933,
+            "missing_prefix_anywhere": 9378,
+            "too_short": 1804
           },
           "fail_reason_r1": {
-            "missing_anchor_right": 41588,
-            "missing_prefix_anywhere": 10351,
-            "too_short": 1616
+            "missing_anchor_right": 44131,
+            "missing_prefix_anywhere": 8374,
+            "too_short": 1804
           },
           "fail_reason_r2": {
-            "missing_anchor_right": 40392,
-            "too_short": 5978,
-            "missing_prefix_anywhere": 2663
+            "missing_anchor_right": 43074,
+            "too_short": 6677,
+            "missing_prefix_anywhere": 2265
           }
         }
       },
       "overall_fail_reason_pair": {
-        "missing_anchor_right": 49351,
-        "missing_prefix_anywhere": 11748,
-        "too_short": 1616
+        "missing_anchor_right": 50933,
+        "missing_prefix_anywhere": 9378,
+        "too_short": 1804
       },
       "overall_fail_reason_r1": {
-        "missing_anchor_right": 41588,
-        "missing_prefix_anywhere": 10351,
-        "too_short": 1616
+        "missing_anchor_right": 44131,
+        "missing_prefix_anywhere": 8374,
+        "too_short": 1804
       },
       "overall_fail_reason_r2": {
-        "missing_anchor_right": 40392,
-        "too_short": 5978,
-        "missing_prefix_anywhere": 2663
+        "missing_anchor_right": 43074,
+        "too_short": 6677,
+        "missing_prefix_anywhere": 2265
+      }
+    },
+    "stage3_5_umi_quality": {
+      "status": "success",
+      "umi_quality_root": "/home/uniscan/PrimerForge/results/example/UMI_quality/run1",
+      "per_population": {
+        "1": {
+          "out_txt": "/home/uniscan/PrimerForge/results/example/UMI_quality/run1/1/UMI_quality_summary.txt",
+          "family_summary": {
+            "unique_families": 60957,
+            "mean_reads_per_family": 1.4965139360532835,
+            "median_family_size": 1,
+            "max_family_size": 12,
+            "n_size_1": 40746,
+            "n_size_2": 13538,
+            "n_size_3": 4418,
+            "n_size_gt3": 2255,
+            "pct_size_1": 0.668438407401939,
+            "pct_size_2": 0.2220909821677576,
+            "pct_size_3": 0.07247732007808783,
+            "pct_size_gt3": 0.0369932903522155,
+            "n_ge2": 20211,
+            "pct_ge2": 0.33156159259806095,
+            "n_ge3": 6673,
+            "pct_ge3": 0.10947061043030333
+          },
+          "counts": {
+            "total_pairs": 153338,
+            "extracted_pairs": 91223,
+            "unmatched_pairs": 62115
+          }
+        }
       }
     },
     "stage4_clean_qc": {
       "status": "success",
-      "umi_extracted_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2",
-      "qc_overview_root": "/home/uniscan/PrimerForge/results/example/qc_overview/02_clean_after_umi/run2",
-      "qc_details_root": "/home/uniscan/PrimerForge/results/example/qc_details/02_clean_after_umi/run2",
+      "umi_extracted_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1",
+      "qc_overview_root": "/home/uniscan/PrimerForge/results/example/qc_overview/02_clean_after_umi/run1",
+      "qc_details_root": "/home/uniscan/PrimerForge/results/example/qc_details/02_clean_after_umi/run1",
       "per_population": {
         "1": {
-          "r1": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_R1.fastq.gz",
-          "r2": "/home/uniscan/PrimerForge/results/example/umi_extracted/run2/1/1_R2.fastq.gz",
-          "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/02_clean_after_umi/run2/1",
-          "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/02_clean_after_umi/run2/1",
-          "r1_total_reads": 128178,
-          "r2_total_reads": 128178,
-          "r1_q30_rate": 0.9377042590015531,
-          "r2_q30_rate": 0.9555213461008861
+          "r1": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1/1_R1.fastq.gz",
+          "r2": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1/1_R2.fastq.gz",
+          "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/02_clean_after_umi/run1/1",
+          "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/02_clean_after_umi/run1/1",
+          "r1_total_reads": 91223,
+          "r2_total_reads": 91223,
+          "r1_q30_rate": 0.9365697586706951,
+          "r2_q30_rate": 0.9531743512818501
         }
       }
     },
@@ -123,36 +155,102 @@
       "status": "success",
       "version": "v1",
       "q_threshold": 30,
-      "min_len": 140,
-      "trim_only_dir": "/home/uniscan/PrimerForge/results/example/trim_only/run2/v1",
-      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1",
-      "trim_reports_dir": "/home/uniscan/PrimerForge/results/example/trim_reports/run2/v1",
-      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/03_trim_only/run2/v1",
+      "min_len": 150,
+      "trim_only_dir": "/home/uniscan/PrimerForge/results/example/trim_only/run1/v1",
+      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1",
+      "trim_reports_dir": "/home/uniscan/PrimerForge/results/example/trim_reports/run1/v1",
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/03_trim_only/run1/v1",
       "global": {
-        "total_pairs": 128064,
-        "kept_pairs": 127818,
-        "dropped_pairs": 246,
-        "kept_rate": 0.9980790854572713,
-        "short_rate": 0.0019209145427286356
+        "total_pairs": 91154,
+        "kept_pairs": 90959,
+        "dropped_pairs": 195,
+        "kept_rate": 0.9978607631041972,
+        "short_rate": 0.0021392368958027077
       }
     },
     "stage6_post_trim_qc": {
       "status": "success",
-      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run2/v1",
-      "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/01_post_trim/run2",
-      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2",
-      "overall_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2/overall",
+      "trimmed_dir": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1",
+      "qc_details_dir": "/home/uniscan/PrimerForge/results/example/qc_details/01_post_trim/run1",
+      "qc_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run1",
+      "overall_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run1/overall",
       "per_population_overview": {
         "1": {
-          "r1_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2/1/R1",
-          "r2_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run2/1/R2"
+          "r1_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run1/1/R1",
+          "r2_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/01_post_trim/run1/1/R2"
         }
       },
       "n_populations": 1,
-      "overall_q30_rate_r1": 0.9390313492809352,
-      "overall_q30_rate_r2": 0.9570304303306867
+      "overall_q30_rate_r1": 0.9377366438638802,
+      "overall_q30_rate_r2": 0.9544527355070817
+    },
+    "stage7_family_strategy": {
+      "stage": "stage7_family_strategy",
+      "exp": "example",
+      "run_tag": "run1",
+      "trimmed_version": "v1",
+      "per_population": {
+        "1": {
+          "family_report": {
+            "pop": "1",
+            "trimmed_r1": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R1.fastq.gz",
+            "trimmed_r2": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R2.fastq.gz",
+            "total_families": 60772,
+            "total_pairs": 90959,
+            "size_1": 40619,
+            "size_2": 13493,
+            "size_ge_3": 6660,
+            "mean_family_size": 1.496725465674982,
+            "median_family_size": 1.0
+          },
+          "selection": {
+            "selected_strategy": "reporting"
+          },
+          "strategy_output": {
+            "strategy": "reporting",
+            "pop": "1",
+            "out_r1": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R1.fastq.gz",
+            "out_r2": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R2.fastq.gz",
+            "note": "Direct downstream processing from Stage 5 trimmed FASTQ."
+          },
+          "family_size_table_csv": "/home/uniscan/PrimerForge/results/example/family_strategy/run1/v1/1/family_size_table.csv",
+          "family_report_json": "/home/uniscan/PrimerForge/results/example/family_strategy/run1/v1/1/family_report.json"
+        }
+      }
+    },
+    "stage8_alignment": {
+      "stage": "stage8_alignment",
+      "per_population": {
+        "1": {
+          "bam": "/home/uniscan/PrimerForge/results/example/alignment/run1/v1/1/1.bam",
+          "bai": "/home/uniscan/PrimerForge/results/example/alignment/run1/v1/1/1.bam.bai"
+        }
+      }
+    },
+    "stage8_5_alignment_qc": {
+      "stage": "stage8_5_alignment_qc",
+      "exp": "example",
+      "run_tag": "run1",
+      "version": "v1",
+      "per_population": {
+        "1": {
+          "total_reads": 181918,
+          "mapped_reads": 181869,
+          "properly_paired": 181840,
+          "mapping_rate": 0.999730647874317,
+          "coverage_percent": 7.47084,
+          "mean_depth": 115282.63787375415,
+          "median_depth": 181818,
+          "max_depth": 181869,
+          "qc_status": "PASS",
+          "bam": "/home/uniscan/PrimerForge/results/example/alignment/run1/v1/1/1.bam",
+          "flagstat_txt": "/home/uniscan/PrimerForge/results/example/alignment_qc/run1/v1/1/flagstat.txt",
+          "coverage_txt": "/home/uniscan/PrimerForge/results/example/alignment_qc/run1/v1/1/coverage.txt",
+          "depth_txt": "/home/uniscan/PrimerForge/results/example/alignment_qc/run1/v1/1/depth.txt"
+        }
+      }
     }
   },
-  "status": "stage_6_success",
-  "finished_utc": "2026-03-06T02:20:22.559297+00:00"
+  "status": "stage_8_5_success",
+  "finished_utc": "2026-03-12T23:00:17.253828+00:00"
 }

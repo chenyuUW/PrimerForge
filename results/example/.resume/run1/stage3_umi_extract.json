@@ -1,0 +1,92 @@
+{
+  "done": true,
+  "extra": {
+    "stage3_result": {
+      "mode": "strict",
+      "overall_fail_reason_pair": {
+        "missing_anchor_right": 50933,
+        "missing_prefix_anywhere": 9378,
+        "too_short": 1804
+      },
+      "overall_fail_reason_r1": {
+        "missing_anchor_right": 44131,
+        "missing_prefix_anywhere": 8374,
+        "too_short": 1804
+      },
+      "overall_fail_reason_r2": {
+        "missing_anchor_right": 43074,
+        "missing_prefix_anywhere": 2265,
+        "too_short": 6677
+      },
+      "overall_unmatched_rate": 0.4050854973979053,
+      "per_population": {
+        "1": {
+          "extracted_pairs": 91223,
+          "fail_reason_pair": {
+            "missing_anchor_right": 50933,
+            "missing_prefix_anywhere": 9378,
+            "too_short": 1804
+          },
+          "fail_reason_r1": {
+            "missing_anchor_right": 44131,
+            "missing_prefix_anywhere": 8374,
+            "too_short": 1804
+          },
+          "fail_reason_r2": {
+            "missing_anchor_right": 43074,
+            "missing_prefix_anywhere": 2265,
+            "too_short": 6677
+          },
+          "out_dir": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1",
+          "reason_report": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1/umi_extraction_summary.txt",
+          "short_pairs_lt150": 51725,
+          "short_rate_lt150": 0.3373266900572591,
+          "total_pairs": 153338,
+          "umi_dict_path": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1/1/1_UMI_dict.pkl",
+          "unmatched_pairs": 62115,
+          "unmatched_rate": 0.4050854973979053,
+          "usable_fail_reason_pair": {
+            "missing_anchor_right": 4771,
+            "missing_prefix_anywhere": 5801
+          },
+          "usable_pairs_ge150": 101613,
+          "usable_unmatched_pairs": 10572,
+          "usable_unmatched_rate": 0.10404180567447079
+        }
+      },
+      "status": "success",
+      "umi_extracted_root": "/home/uniscan/PrimerForge/results/example/umi_extracted/run1"
+    }
+  },
+  "signature": {
+    "exp": "example",
+    "multiplex_csv": {
+      "exists": true,
+      "mtime": 1772670271,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_multiplexing_info.csv",
+      "size": 72
+    },
+    "r1": {
+      "exists": true,
+      "mtime": 1772585634,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R1_001.fastq",
+      "size": 75645153
+    },
+    "r2": {
+      "exists": true,
+      "mtime": 1772585634,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_fastq/P22R1_R2_001.fastq",
+      "size": 75745471
+    },
+    "run_tag": "run1",
+    "stage": "stage3_umi_extract",
+    "umi_primers_csv": {
+      "exists": true,
+      "mtime": 1772672381,
+      "path": "/home/uniscan/PrimerForge/input_data/example/example_UMI_primers.csv",
+      "size": 108
+    }
+  },
+  "stage": "stage3_umi_extract",
+  "time": 1773355212
+}

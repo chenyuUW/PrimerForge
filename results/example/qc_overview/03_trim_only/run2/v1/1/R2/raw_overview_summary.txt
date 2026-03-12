@@ -1,3 +1,0 @@
-Total reads: 128064
-Short rate (<150bp): 0.193%
-Q30 rate (base-level): 95.705%

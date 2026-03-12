@@ -1,7 +1,7 @@
 {
   "stage": "stage5_1_candidate_eval",
   "exp": "example",
-  "run_tag": "run2",
+  "run_tag": "run1",
   "version": "v1",
   "candidates": [
     30,
@@ -12,85 +12,85 @@
   ],
   "per_population": {
     "1": {
-      "total_pairs_est": 128178,
+      "total_pairs_est": 91223,
       "sample": {
-        "sample_pairs": 38453,
-        "requested_pairs": 38453,
-        "out_r1": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/sample/1.sample.R1.fastq",
-        "out_r2": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/sample/1.sample.R2.fastq"
+        "sample_pairs": 27366,
+        "requested_pairs": 27366,
+        "out_r1": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/sample/1.sample.R1.fastq",
+        "out_r2": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/sample/1.sample.R2.fastq"
       },
       "candidates": {
         "Q30": {
-          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q30/fastp.json",
-          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q30/fastp.html",
+          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q30/fastp.json",
+          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q30/fastp.html",
           "metrics": {
-            "q30_before": 0.9416325394670705,
-            "q30_after": 0.9432572262896565,
-            "total_reads_before": 76906,
-            "total_reads_after": 76838,
-            "total_bases_before": 14674512,
-            "total_bases_after": 14641089,
-            "mean_len_after": 190.5448996590229,
+            "q30_before": 0.9403379554664694,
+            "q30_after": 0.9416829835371239,
+            "total_reads_before": 54732,
+            "total_reads_after": 54700,
+            "total_bases_before": 10438831,
+            "total_bases_after": 10419686,
+            "mean_len_after": 190.48786106032907,
             "trimmed_bases": null
           },
           "trimmed_bases_pct": 0.0
         },
         "Q29": {
-          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q29/fastp.json",
-          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q29/fastp.html",
+          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q29/fastp.json",
+          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q29/fastp.html",
           "metrics": {
-            "q30_before": 0.9416325394670705,
-            "q30_after": 0.9432572262896565,
-            "total_reads_before": 76906,
-            "total_reads_after": 76838,
-            "total_bases_before": 14674512,
-            "total_bases_after": 14641089,
-            "mean_len_after": 190.5448996590229,
+            "q30_before": 0.9403379554664694,
+            "q30_after": 0.9416829835371239,
+            "total_reads_before": 54732,
+            "total_reads_after": 54700,
+            "total_bases_before": 10438831,
+            "total_bases_after": 10419686,
+            "mean_len_after": 190.48786106032907,
             "trimmed_bases": null
           },
           "trimmed_bases_pct": 0.0
         },
         "Q28": {
-          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q28/fastp.json",
-          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q28/fastp.html",
+          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q28/fastp.json",
+          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q28/fastp.html",
           "metrics": {
-            "q30_before": 0.9416325394670705,
-            "q30_after": 0.9432572262896565,
-            "total_reads_before": 76906,
-            "total_reads_after": 76838,
-            "total_bases_before": 14674512,
-            "total_bases_after": 14641089,
-            "mean_len_after": 190.5448996590229,
+            "q30_before": 0.9403379554664694,
+            "q30_after": 0.9416829835371239,
+            "total_reads_before": 54732,
+            "total_reads_after": 54700,
+            "total_bases_before": 10438831,
+            "total_bases_after": 10419686,
+            "mean_len_after": 190.48786106032907,
             "trimmed_bases": null
           },
           "trimmed_bases_pct": 0.0
         },
         "Q25": {
-          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q25/fastp.json",
-          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q25/fastp.html",
+          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q25/fastp.json",
+          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q25/fastp.html",
           "metrics": {
-            "q30_before": 0.9416325394670705,
-            "q30_after": 0.9423368427818599,
-            "total_reads_before": 76906,
-            "total_reads_after": 76838,
-            "total_bases_before": 14674512,
-            "total_bases_after": 14655389,
-            "mean_len_after": 190.73100549207425,
+            "q30_before": 0.9403379554664694,
+            "q30_after": 0.9408740322920753,
+            "total_reads_before": 54732,
+            "total_reads_after": 54698,
+            "total_bases_before": 10438831,
+            "total_bases_after": 10428379,
+            "mean_len_after": 190.65375333650226,
             "trimmed_bases": null
           },
           "trimmed_bases_pct": 0.0
         },
         "Q20": {
-          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q20/fastp.json",
-          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run2/v1/1/Q20/fastp.html",
+          "fastp_json": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q20/fastp.json",
+          "fastp_html": "/home/uniscan/PrimerForge/results/example/trim_eval/run1/v1/1/Q20/fastp.html",
           "metrics": {
-            "q30_before": 0.9416325394670705,
-            "q30_after": 0.9423368427818599,
-            "total_reads_before": 76906,
-            "total_reads_after": 76838,
-            "total_bases_before": 14674512,
-            "total_bases_after": 14655389,
-            "mean_len_after": 190.73100549207425,
+            "q30_before": 0.9403379554664694,
+            "q30_after": 0.9408740322920753,
+            "total_reads_before": 54732,
+            "total_reads_after": 54698,
+            "total_bases_before": 10438831,
+            "total_bases_after": 10428379,
+            "mean_len_after": 190.65375333650226,
             "trimmed_bases": null
           },
           "trimmed_bases_pct": 0.0

@@ -1,0 +1,24 @@
+Experiment: example
+Run tag:    run1
+Population: 1
+========================================================================
+Total read pairs:        153338
+Pairs with UMI extracted:91223
+Unmatched/failed pairs:  62115
+Unmatched rate:          40.509%
+========================================================================
+
+[Pair-level fail reasons] (first failure reason)
+  missing_anchor_right        50933  (82.00%)
+  missing_prefix_anywhere       9378  (15.10%)
+  too_short                    1804  ( 2.90%)
+
+[R1 fail reasons]
+  missing_anchor_right        44131  (81.26%)
+  missing_prefix_anywhere       8374  (15.42%)
+  too_short                    1804  ( 3.32%)
+
+[R2 fail reasons]
+  missing_anchor_right        43074  (82.81%)
+  too_short                    6677  (12.84%)
+  missing_prefix_anywhere       2265  ( 4.35%)

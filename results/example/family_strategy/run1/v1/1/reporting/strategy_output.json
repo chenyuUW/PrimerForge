@@ -1,0 +1,7 @@
+{
+  "strategy": "reporting",
+  "pop": "1",
+  "out_r1": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R1.fastq.gz",
+  "out_r2": "/home/uniscan/PrimerForge/results/example/trimmed/run1/v1/1/1.trimQ30.minlen150.R2.fastq.gz",
+  "note": "Direct downstream processing from Stage 5 trimmed FASTQ."
+}

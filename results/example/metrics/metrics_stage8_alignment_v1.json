@@ -1,0 +1,9 @@
+{
+  "stage": "stage8_alignment",
+  "per_population": {
+    "1": {
+      "bam": "/home/uniscan/PrimerForge/results/example/alignment/run1/v1/1/1.bam",
+      "bai": "/home/uniscan/PrimerForge/results/example/alignment/run1/v1/1/1.bam.bai"
+    }
+  }
+}

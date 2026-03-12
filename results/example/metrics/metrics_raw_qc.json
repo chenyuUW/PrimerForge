@@ -1,35 +1,35 @@
 {
   "stage": "stage1_raw_qc",
   "exp": "example",
-  "run_tag": "run2",
+  "run_tag": "run1",
   "short_len_bp": 150,
   "definitions": {
     "short_rate": "read-level; read is short if length < 150",
     "q30_rate": "base-level; fraction of bases with Phred >= 30"
   },
   "qc_details": {
-    "dir": "/home/uniscan/PrimerForge/results/example/qc_details/00_raw/run2",
-    "r1_fastqc_dir": "/home/uniscan/PrimerForge/results/example/qc_details/00_raw/run2/P22R2_R1_001_fastqc",
-    "r2_fastqc_dir": "/home/uniscan/PrimerForge/results/example/qc_details/00_raw/run2/P22R2_R1_001_fastqc"
+    "dir": "/home/uniscan/PrimerForge/results/example/qc_details/00_raw/run1",
+    "r1_fastqc_dir": "/home/uniscan/PrimerForge/results/example/qc_details/00_raw/run1/P22R1_R1_001_fastqc",
+    "r2_fastqc_dir": "/home/uniscan/PrimerForge/results/example/qc_details/00_raw/run1/P22R1_R1_001_fastqc"
   },
   "qc_overview": {
-    "dir": "/home/uniscan/PrimerForge/results/example/qc_overview/00_raw/run2",
-    "r1_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/00_raw/run2/R1",
-    "r2_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/00_raw/run2/R2"
+    "dir": "/home/uniscan/PrimerForge/results/example/qc_overview/00_raw/run1",
+    "r1_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/00_raw/run1/R1",
+    "r2_overview_dir": "/home/uniscan/PrimerForge/results/example/qc_overview/00_raw/run1/R2"
   },
   "r1": {
-    "total_reads": 203624,
-    "q30_rate": 0.944478501281072,
-    "short_rate_lt150": 0.252249243704082
+    "total_reads": 165273,
+    "q30_rate": 0.9449464325690591,
+    "short_rate_lt150": 0.3390208927047975
   },
   "r2": {
-    "total_reads": 203624,
-    "q30_rate": 0.9562245446621891,
-    "short_rate_lt150": 0.25117373197658427
+    "total_reads": 165273,
+    "q30_rate": 0.9552725425228412,
+    "short_rate_lt150": 0.3372238659672179
   },
   "combined": {
-    "short_rate_used": 0.252249243704082,
-    "q30_rate_used": 0.944478501281072
+    "short_rate_used": 0.3390208927047975,
+    "q30_rate_used": 0.9449464325690591
   },
   "decision": {
     "abnormal": false,

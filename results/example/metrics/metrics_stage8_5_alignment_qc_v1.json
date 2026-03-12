@@ -1,0 +1,23 @@
+{
+  "stage": "stage8_5_alignment_qc",
+  "exp": "example",
+  "run_tag": "run1",
+  "version": "v1",
+  "per_population": {
+    "1": {
+      "total_reads": 181918,
+      "mapped_reads": 181869,
+      "properly_paired": 181840,
+      "mapping_rate": 0.999730647874317,
+      "coverage_percent": 7.47084,
+      "mean_depth": 115282.63787375415,
+      "median_depth": 181818,
+      "max_depth": 181869,
+      "qc_status": "PASS",
+      "bam": "/home/uniscan/PrimerForge/results/example/alignment/run1/v1/1/1.bam",
+      "flagstat_txt": "/home/uniscan/PrimerForge/results/example/alignment_qc/run1/v1/1/flagstat.txt",
+      "coverage_txt": "/home/uniscan/PrimerForge/results/example/alignment_qc/run1/v1/1/coverage.txt",
+      "depth_txt": "/home/uniscan/PrimerForge/results/example/alignment_qc/run1/v1/1/depth.txt"
+    }
+  }
+}

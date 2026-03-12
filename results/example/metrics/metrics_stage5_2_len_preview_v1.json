@@ -1,21 +1,21 @@
 {
   "version": "v1",
-  "min_len": 140,
+  "min_len": 150,
   "per_population": {
     "1": {
-      "total_pairs": 128064,
-      "short_pairs": 246,
-      "kept_pairs": 127818,
-      "short_rate": 0.0019209145427286356,
-      "kept_rate": 0.9980790854572713,
-      "estimated_dropped_reads": 246
+      "total_pairs": 91154,
+      "short_pairs": 195,
+      "kept_pairs": 90959,
+      "short_rate": 0.0021392368958027077,
+      "kept_rate": 0.9978607631041972,
+      "estimated_dropped_reads": 195
     }
   },
   "global": {
-    "total_pairs": 128064,
-    "short_pairs": 246,
-    "short_rate": 0.0019209145427286356,
-    "kept_rate": 0.9980790854572714
+    "total_pairs": 91154,
+    "short_pairs": 195,
+    "short_rate": 0.0021392368958027077,
+    "kept_rate": 0.9978607631041972
   },
   "decision": {
     "abnormal": false,
